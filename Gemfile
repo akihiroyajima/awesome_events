@@ -51,6 +51,7 @@ gem 'mini_magick', '~> 3.7.0'
 
 group :test do
 	gem 'shoulda-matchers', '~> 2.6.0'
+	gem 'capybara', '~> 2.2.1'
 end
 
 group :development, :test do
