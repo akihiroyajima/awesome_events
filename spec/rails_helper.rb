@@ -43,16 +43,12 @@ RSpec.configure do |config|
 		DatabaseCleaner.clean_with(:truncation)
 	end
 
-	config.before(:suite) do
+	config.before(:each) do
 		DatabaseCleaner.strategy = :transaction
 	end
 
-	config.before(:each) do
-		DatabaseCleaner.strategy = :trancation
-	end
-
 	config.before(:each, js: true) do
-		DatabaseCleaner.strategy = :trancation
+		DatabaseCleaner.strategy = :truncation
 	end
 
 	config.before(:each) do
